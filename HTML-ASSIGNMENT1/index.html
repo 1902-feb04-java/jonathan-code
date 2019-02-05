@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    <img src="dfworld.png" alt="Dwarf Fortress">
+    <h1>About</h1>
+    <p>Some text about the website.</p>
+    <br>
+    <h2>Our Locations</h2>
+
+    <ul>
+        <li>USA
+            <ul>
+                <li><a href="">New York</a></li>
+                <li><a href="">Columbus</a></li>
+                <li><a href="">Austin</a></li>
+                <li><a href="">Philly</a></li>
+            </ul>
+        </li>
+        <li>World
+            <ul>
+                <li><a href="">Ottawa</a></li>
+                <li><a href="">Sydney</a></li>
+            </ul>
+        </li>
+    </ul>
+
+    <h2>Upcoming Classes</h2>
+    <table>
+        <thead>
+        </thead>
+        <tbody>
+            <tr>
+                <td><b>Location</b></td>
+                <td><b>Topic</b></td>
+            </tr>
+            <tr>
+                <td>New York</td>
+                <td>JavaScript &amp; jQuery</td>
+            </tr>
+            <tr>
+                <td>San Francisco</td>
+                <td>HTML & CSS</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Sign Up!</h2>
+
+    <form action="#" method="POST">
+        <label>Name:
+            <input type=text name="name">
+        </label>
+        <br>
+
+        <label>Email:
+            <input type="email" name="email">
+        </label>
+        <br>
+
+        <label>Location:
+            <select name=location>
+                <option selected value="sf">San Francisco</option>
+                <option value="ny">New York</option>
+            </select>
+        </label>
+        <br>
+
+        <fieldset>
+            <legend>Gender:</legend>
+            <!-- radio button problem: either put "checked" as an attribute -->
+            <!-- or make at least one radio button "required" as an attribute -->
+            <!-- otherwise there will be no value submitted for that name -->
+            <label>Female
+                    <input type=radio name="gender" value="female" required>
+            </label>
+            <label>Male
+                <input type=radio name="gender" value="male" required>
+            </label>
+            <label>Nonbinary
+                <input type=radio name="gender" value="nonbinary" required>
+            </label>
+        </fieldset>
+        <br>
+ 
+        <label>Experience: <br>
+            <textarea name=exp></textarea>
+        </label>
+        <br>
+        <input type="submit" value="Sign Up">
+    </form>
+    <br>
+
+    <p>
+        <a href="">Twitter</a> |
+        <a href="">Facebook</a> |
+        <a href="">Flicker</a>
+    </p>
+</body>
+</html>

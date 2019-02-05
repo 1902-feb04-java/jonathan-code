@@ -1,0 +1,208 @@
+<!-- This is HTML syntax for comments! cannot nest comments -->
+<!-- you can press "ctrl /" to comment highlighted text, or current line of cursor -->
+
+<!-- the "doctype" document type declaration. What type of HTML are we using? -->
+<!-- the doctype for HTML 5 is just "<!DOCTYPE html>" -->
+<!-- with no doctype, probobly going to assume some legacy/compatibility old HTML behavior -->
+<!DOCTYPE html>
+<!-- HTML element (root of the whole document) -->
+<html>
+<!-- HEAD element (for metadata, data about the document's contents)-->
+<head>
+    <!-- charset = character set -->
+    <!-- ASCII encoding baseline -->
+    <!-- Unicode is a namespace of characters -->
+    <!-- "UTF-8" is the standard encoding for Unicode -->
+    <meta charset="utf-8" /> <!-- self closing tag -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- title element is for the name of the tab/window -->
+    <title>Page Title</title>
+    <!-- This defines some initial display parameters for mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- import an extrernal stylesheet (CSS file) -->
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <!-- import an external script (JS file) -->
+    <script src="main.js"></script>
+    <!-- <meta name="something"> -->
+    <!-- application-name --- name of webapp -->
+    <!-- author -->
+    <!-- description -->
+    <!-- keywords -->
+        <!-- used to be used for SEO - Search-engine-optimization -->
+    <!-- robots (specifiying stuff to google robots, like don't look in this directory) -->
+</head>
+<!-- BODY element, the page contents themselves -->
+<body>
+    <!-- whitespace doesn't matter -->
+    <!-- it's CSS's job to control "layout" like this -->
+    Hello, world!
+    <!-- paragraph -->
+    <p>Paragraph text</p>
+
+    <!-- section headers -->
+    <h1>Header 1</h1>
+    <h2>Header 2</h2>
+    <h6>Header 6</h6>
+
+    <!-- image -->
+    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Wild_Platypus_4.jpg">
+    <!-- we can point to remotely hosted images at some http:// address -->
+    <!-- we can also point to locally hosted images with a relative path -->
+    <!-- "alt" attribute for alternate text when image can't be loaded/displayed -->
+
+    <!-- <a> = "anchor" tag. link -->
+    <a href="https://google.com">Link to Google</a>
+    <!-- we have target="_blank" on links for opening in a new tab -->
+
+    <!-- ordered list, numbered points -->
+    <ol>
+        <li>
+            item 1
+        </li>
+        <li> item 2 </li>
+    </ol>
+
+    <!-- unordered list, bullet points -->
+    <ul>
+        <li>
+            item 1
+        </li>
+        <li> item 2 </li>
+    </ul>
+    <!-- description list (dl tag) -->
+
+    <!-- <br> = line break -->
+    <p> one line <br> two line </p>
+
+    <p> <em>Emphasize</em> text</p> <!-- italics by default -->
+    <p> <strong>Strong</strong> text</p> <!-- boldface by default -->
+    <p> <u>Underlined</u> text</p>
+
+    <blockquote>
+        Indented (by default) quotation of some kind
+    </blockquote>
+    
+    <!-- in HTML, we have block elements and inline elements -->
+    <!-- block elemtns "own" thier own vertical space -->
+        <!-- examples: p, h1, ol, blockquote -->
+    <!-- inline elements do not, happily occupy the same line -->
+        <!-- examples: br, em, storng, u, img, a -->
+    <div>
+        div is a generic block element for anything that doesn't already have a tag defined
+    </div>
+    <span> span is a generic inline element for when there's no tag for that </span>
+    <table>
+        <thead>
+            <tr> <!-- table row -->
+                <th> column 1</th> <!-- table header cell-->
+                <th> column 2</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td> value 1</td> <!-- "table data" (cell) -->
+                <td> value 2</td>
+            </tr>
+            <tr>
+                <td> value 3</td>
+                <td> value 4</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- because VS Code is saving this file as UTF-8 -->
+    <!-- AND because it's declared charset is UTF-8 -->
+    <p>男孩</p>
+    <p></p> <!-- how do I have a blank character? -->
+    <!-- character references -->
+    <!-- tell the browwser to render a character without -->
+    <!-- literally having it in this file -->
+    <p> &lt; </p> <!-- lt for less than-->
+    <p> &gt; </p> <!-- gt for greater than -->
+    <p> &amp; </p> <!-- amp for ampersand -->
+    <!-- sometimes called "HTML codes" -->
+    <p> &copy; © </p>
+    <!-- often you should just put the character directly in the HTML -->
+    <!-- except for whitespace like &nbsp; (non-breaking space) -->
+    &#1289; <!-- decimal unicode reference -->
+    &#x20AB; <!-- hex unicode reference-->
+    <br>
+    <select> <!-- "select list" = dropdown list -->
+        <option> option 1 </option>
+        <option> option 2 </option>
+        <option> option 3 </option>
+    </select>
+
+    <!-- some new elements in HTML 5: audio, video, canvas (arbitrary graphics)  -->
+    <video></video>
+    <audio></audio>
+    <!-- replace plugins like flash with native A/V support -->
+    <!-- we can specify more than one source file -->
+    <!-- with different codecs, let each browser download the one it can play-->
+    <!-- transcription support -->
+
+    <canvas></canvas>
+    <!-- area of screen to draw 'graphics primitives' onto, allowing some dynamic behavior -- like for "flash games" -->
+
+    <!-- accessibility big focus for HTML 5
+    e.g. many ARIA attributes to help screen readers etc. -->
+    
+    <!-- <div class="section"> -->
+    <!-- block elements with a structural meaning -->
+    <section></section>
+    <article></article>
+    <header></header>
+    <footer></footer>
+    <aside></aside>
+    <nav></nav>
+
+    <!-- forms -->
+    <!-- basic HTTP, you have GET method, and POST method -->
+    <!-- GET requests have only a URL -->
+    <!-- typically, forms use POST, and send key-value pairs to the server in the HTTP request body. -->
+    <form method="GET" action="https://www.google.com/search">
+        <!-- input elements provide a key-value pair -->
+        <!-- to the form as a whole to be submitted -->
+        <!-- the key will be from the "name" attribute -->
+        <!-- looks like "https://www.google.com/search?q=revature" -->
+        <input type="text" name="q">
+        <!-- naming this one "q" because that's what google uses -->
+        <input type="submit">
+    </form>
+
+    <form method="POST">
+        <label for="num">Enter number: </label>
+        <input type="number" name="num" id="num">
+        <label> Enter true/false 
+                <input type="checkbox" name=bool>
+        </label>
+
+        <br>
+        <!-- HTML shorthand - for an attribute without -->
+        <!-- the value is the attribute -->
+        <!-- e.g. [required="required"] is the same as [required] -->
+        <input type="text" name="username" placeholder="username" required minlength="6">
+        <br>
+
+        <input type="password" placeholder="Password">
+
+        <input type=range min="0" max="1000">
+
+        <input type="date">
+
+        <input type="color">
+
+        <input type="file">
+
+        <!-- radio buttons -->
+        <label>option 1
+            <input type="radio" name="which" value="1">
+        </label>
+        <label>option 2
+            <input type="radio" name="which" value="2">
+        </label>
+
+        <input type="submit">
+    </form>
+</body>
+</html>
